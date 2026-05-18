@@ -9,6 +9,7 @@ Self-contained Jupyter notebooks, each demonstrating one practical LLM task — 
 | # | Task | Folder | Model |
 |---|------|--------|-------|
 | 1 | Arabic → English translation | [Translation/](Translation/) | `facebook/nllb-200-distilled-600M` |
+| 2 | English text summarization | [Summarization/](Summarization/) | `facebook/bart-large-cnn` |
 
 ---
 
@@ -34,6 +35,9 @@ LLM-Quicks/
 ├── README.md                        # this file — repo index
 ├── Translation/
 │   ├── translation_ar_eng.ipynb
+│   └── README.md
+├── Summarization/
+│   ├── summarization_en.ipynb
 │   └── README.md
 └── <future-notebooks>/
     ├── notebook.ipynb
