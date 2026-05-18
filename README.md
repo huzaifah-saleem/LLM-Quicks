@@ -1,14 +1,14 @@
 # LLM Quicks
 
-A growing collection of self-contained Jupyter notebooks, each demonstrating one practical LLM task — runnable in minutes, no boilerplate.
+Self-contained Jupyter notebooks, each demonstrating one practical LLM task — runnable in minutes, no shared dependencies between notebooks.
 
 ---
 
 ## Notebooks
 
-| # | Task | Notebook | Model |
-|---|------|----------|-------|
-| 1 | Arabic → English translation | [translation_ar_eng.ipynb](translation_ar_eng.ipynb) | `facebook/nllb-200-distilled-600M` |
+| # | Task | Folder | Model |
+|---|------|--------|-------|
+| 1 | Arabic → English translation | [Translation/](Translation/) | `facebook/nllb-200-distilled-600M` |
 
 ---
 
@@ -23,36 +23,7 @@ uv pip install transformers sentencepiece torch ipywidgets jupyter
 jupyter notebook
 ```
 
-Then open any notebook and run all cells.
-
----
-
-## Notebook 1 — Arabic → English Translation
-
-An interactive widget that translates Arabic text (including dialects) to English in real time.
-
-**Model:** [facebook/nllb-200-distilled-600M](https://huggingface.co/facebook/nllb-200-distilled-600M) — Meta's No Language Left Behind model, trained on 200 languages.
-
-**How to change the language pair**
-
-Only the Config cell needs to change:
-
-```python
-SRC_LANG  = "arb_Arab"   # Arabic
-TGT_LANG  = "eng_Latn"   # English
-```
-
-Common NLLB language codes:
-
-| Language | Code |
-|----------|------|
-| Arabic | `arb_Arab` |
-| English | `eng_Latn` |
-| French | `fra_Latn` |
-| Spanish | `spa_Latn` |
-| German | `deu_Latn` |
-
-Full list: [FLORES-200 language codes](https://github.com/facebookresearch/flores/blob/main/flores200/README.md)
+Open any notebook folder and follow its own README for model-specific setup.
 
 ---
 
@@ -60,11 +31,14 @@ Full list: [FLORES-200 language codes](https://github.com/facebookresearch/flore
 
 ```
 LLM-Quicks/
-├── translation_ar_eng.ipynb   # Notebook 1 — Arabic → English
-└── README.md
+├── README.md                        # this file — repo index
+├── Translation/
+│   ├── translation_ar_eng.ipynb
+│   └── README.md
+└── <future-notebooks>/
+    ├── notebook.ipynb
+    └── README.md
 ```
-
-New notebooks will be added as standalone files — one task per notebook, no shared dependencies.
 
 ---
 
